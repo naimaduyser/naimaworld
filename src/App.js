@@ -4,13 +4,13 @@ import { useDispatch } from "react-redux";
 
 import { IsArchive } from "./store/actions/maindata";
 
-import MusicPlayer from "./components/MusicPlayer";
-import Navbar from "./components/Navbar";
+import MusicPlayer from "./components/musicplayer";
+import Navbar from "./components/navbar";
 import './index.css'
 // Pages
-import Home from './routes/Home'
-import Archive from './routes/Archive'
-import Schedule from './routes/Schedule'
+import Home from './routes/home'
+import Archive from './routes/archive'
+import Schedule from './routes/schedule'
 
 function App() {
   const dispatch = useDispatch();

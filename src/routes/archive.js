@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { IsArchive } from "../store/actions/maindata";
 
 // Styling
-import "../styling/archive.css";
 import "../components/card.css";
 
 // Components
