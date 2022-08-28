@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import { IsArchive } from "./store/actions/maindata";
+
+import MusicPlayer from "./components/MusicPlayer";
+import Navbar from "./components/Navbar";
+import './index.css'
+// Pages
+import Home from './routes/Home'
+import Archive from './routes/Archive'
+import Schedule from './routes/Schedule'
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() =>dispatch(IsArchive(true)), [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/archive" element={<Archive />} />
+      <Route path="/schedule" element={<Schedule />} />
+    </Routes>
+    <MusicPlayer />
+    </>
   );
 }
-
 export default App;
