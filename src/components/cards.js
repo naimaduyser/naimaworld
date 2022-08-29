@@ -22,14 +22,13 @@ function Cards() {
   const maindata = useSelector(store => store.maindata);
   const { loading, error, data } = useQuery(mixes);
 
-  const [playindex, setplayindex] = useState(-1);
+  const [playindex, setplayindex] = useState(-2);
 
   const changePlay = (index, state) => {
     state ? setplayindex(-1) : setplayindex(index);
-
-    dispatch(audioSwitch(maindata.audioIndex !== index));
+    dispatch(audioSwitch(maindata.audioIndex != index));
     dispatch(SetAudioIndex(index));
-    dispatch(setChangedMix(data.mixes[index]));
+    dispatch(setChangedMix(data.mixes));
     dispatch(PlayChange(!state));
     dispatch(IsArchive(true));
   };
@@ -42,8 +41,6 @@ function Cards() {
     },
     [maindata.audioPlayChange, maindata.audioIndex]
   );
-
-  // if (data) console.log(data.mixes);
 
   return (
     <div>
