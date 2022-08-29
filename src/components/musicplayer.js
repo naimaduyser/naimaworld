@@ -159,7 +159,7 @@ const MusicPlayer = () =>
   }, [maindata.playChange])
   
   useEffect(() => {
-    if (maindata.audioswitch) SetaudioURL(maindata.mix.audio.url);
+    if (maindata.audioswitch) SetaudioURL(maindata.mix[maindata.audioIndex].audio.url);
   }, [maindata.audioswitch, maindata.playChange, maindata.audioIndex])
 
   const metaloadedFunc = () => {
@@ -188,24 +188,24 @@ const MusicPlayer = () =>
     }
   }
 
-
   return (
     <div className="music-container">
       {/* Audio Source */}
       <audio
         // autoPlay="autoPlay"
         ref={audioPlayer}
-        src={audioURL}
+        src={maindata.isArchive?audioURL: ''}
         onLoadedData={metaloadedFunc}
         onPlay={()=>{audioPlayPause(true)}}
-        onPause={()=>{audioPlayPause(false)}}
+        onPause={() => { audioPlayPause(false) }}
+        onEnded={audioplayEnd}
         id="audio"
         preload="metadata"
       ></audio>
       {/* Song Title */}
       <div className="song-title" id="title">
         <div className="playing-from">PLAYING FROM: THE ARCHIVE</div>
-        <div className="mix-title">{maindata.mix.title}</div>
+        <div className="mix-title">{maindata.isArchive? maindata.mix.length? maindata.mix[maindata.audioIndex].title : '' : ''}</div>
       </div>
 
       {/* Music Player Buttons */}
