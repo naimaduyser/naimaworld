@@ -39,7 +39,8 @@ function Cards() {
       maindata.audioPlayChange
         ? setplayindex(maindata.audioIndex)
         : setplayindex(-1);
-    }
+    },
+    [maindata.audioPlayChange, maindata.audioIndex]
   );
 
   // if (data) console.log(data.mixes);
