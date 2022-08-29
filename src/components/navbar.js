@@ -19,7 +19,7 @@ const Navbar = () => {
         <NavLink to="/" onClick={closeSideBar} className="logo">naima.world</NavLink>
         <ul className={click ? 'nav-menu active' : 'nav-menu'} onClick={closeSideBar}>
             <li>
-                <NavLink to="/archive" className="navlink" onClick={closeSideBar}>archive</NavLink>
+                <NavLink to="/live" className="navlink" onClick={closeSideBar}>live</NavLink>
             </li>
             <li>
                 <NavLink to="/schedule" className="navlink" onClick={closeSideBar}>schedule</NavLink>

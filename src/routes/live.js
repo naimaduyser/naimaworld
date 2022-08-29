@@ -3,7 +3,7 @@ import React from "react";
 // Components
 import Video from "../components/video";
 
-const Home = () => {
+const Live = () => {
   return (
     <div>
       <Video />
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Live;

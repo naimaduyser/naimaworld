@@ -8,7 +8,7 @@ import MusicPlayer from "./components/musicplayer";
 import Navbar from "./components/navbar";
 import './index.css'
 // Pages
-import Home from './routes/home'
+import Live from './routes/live'
 import Archive from './routes/archive'
 import Schedule from './routes/schedule'
 
@@ -19,8 +19,8 @@ function App() {
     <>
     <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/archive" element={<Archive />} />
+      <Route path="/" element={<Archive />} />
+      <Route path="/live" element={<Live />} />
       <Route path="/schedule" element={<Schedule />} />
     </Routes>
     <MusicPlayer />
