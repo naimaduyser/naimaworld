@@ -7,7 +7,7 @@ export const AUDIOINDEX = "AUDIOINDEX";
 export const AUDIOPLAYCHANGE = "AUDIOPLAYCHANGE";
 
 export const maindata = {
-  mix: {},
+  mix: [],
   playChange: false,
   isArchive: false,
 

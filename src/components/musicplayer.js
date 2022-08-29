@@ -10,7 +10,7 @@ import { BsFillSkipForwardFill } from "react-icons/bs";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BsFillPauseFill } from "react-icons/bs";
 
-
+import { SetAudioIndex } from "../store/actions/maindata";
 const MusicPlayer = () =>
 {
   const dispatch = useDispatch();
@@ -96,6 +96,8 @@ const MusicPlayer = () =>
     if (!maindata.isArchive) {
       progressBar.current.value = Number(0);
       changeRange();
+    } else {
+      nextPrePlay(false)
     }
   }
 
@@ -130,6 +132,8 @@ const MusicPlayer = () =>
         animationRef.current = requestAnimationFrame(whilePlaying);
         setIsPlaying(true);
       }, 0);
+    } else {
+      nextPrePlay(true);
     }
   };
 
@@ -164,6 +168,24 @@ const MusicPlayer = () =>
 
   const audioPlayPause = (status) => {
     dispatch(SetAudioPlay(status));
+  }
+
+  const audioplayEnd = () => {
+    let aIndex = maindata.audioIndex;
+    if (aIndex < maindata.mix.length - 1) {
+      aIndex++; dispatch(SetAudioIndex(aIndex));
+    } else if (aIndex === maindata.mix.length - 1) {
+      setIsPlaying(false)
+    }
+  }
+
+  const nextPrePlay = (status) => {
+    let aIndex = maindata.audioIndex;
+    if (aIndex >= 0 && aIndex < maindata.mix.length) {
+      if ((!status && aIndex === 0) || (status && aIndex === maindata.mix.length -1)) return;
+      status ? aIndex++ : aIndex--;
+      dispatch(SetAudioIndex(aIndex));
+    }
   }
 
 
