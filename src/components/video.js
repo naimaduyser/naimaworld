@@ -12,6 +12,7 @@ const Video = () => {
         <video autoPlay loop muted id="video">
             <source src={homeVideo} type="video/mp4"/>
         </video>
+        <h1 className="hero-text">Work in progress, check back later!</h1>
     </div>
   )
 }

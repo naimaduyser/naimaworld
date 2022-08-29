@@ -13,3 +13,23 @@
     width: 100%;
     object-fit: contain;
 }
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0,0,0,0.8);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 1240px) {
+.hero-text {
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+}
