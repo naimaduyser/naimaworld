@@ -17,17 +17,17 @@ const Navbar = () => {
   return (
     <div className="header">
         <NavLink to="/" onClick={closeSideBar} className="logo">naima.world</NavLink>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'} onClick={closeSideBar}>
+        {/* <ul className={click ? 'nav-menu active' : 'nav-menu'} onClick={closeSideBar}>
             <li>
                 <NavLink to="/live" className="navlink" onClick={closeSideBar}>live</NavLink>
             </li>
             <li>
                 <NavLink to="/schedule" className="navlink" onClick={closeSideBar}>schedule</NavLink>
             </li>
-        </ul>
-        <div className="hamburger" onClick={handleClick}>
+        </ul> */}
+        {/* <div className="hamburger" onClick={handleClick}>
             {click ? (<FaTimes size={30} />) : (<FaBars size={30}/>)}
-        </div>
+        </div> */}
     </div>
   )
 }
