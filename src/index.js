@@ -10,7 +10,7 @@ import { maindata } from "./store/constants/main";
 
 const client = new ApolloClient({
   uri:
-    "https://api-eu-central-1.hygraph.com/v2/cl70ab2xb14um01ujcfhfcfvg/master",
+    "https://api-eu-central-1.hygraph.com/v2/cl70ab2xb14um01ujcfhfcfvg/master?",
   cache: new InMemoryCache()
 });
 
