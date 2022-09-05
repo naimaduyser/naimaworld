@@ -11,7 +11,7 @@
 	left: 0;
 	right: 0;
 	display: flex;
-    justify-content: space-around;
+    justify-content: center;
 	align-items: center;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -98,13 +98,18 @@ button {
 
 .current-time {
 	padding: 20px 10px;
+	width: 40px;
+	padding-right: 30px;
+	text-align: center;
 }
 
 .duration {
-	width: 20px;
-	padding: 20px 0;
+	width: 40px;
+	padding: 20px 10px;
 	padding-right: 30px;
+	text-align: center;
 }
+
 
 /* Slider Styling */
 .player-slider {
@@ -113,6 +118,7 @@ button {
 	justify-content: center;
 	gap: 20px;
 	width: 30%;
+	text-align: center;
 }
 
 .progress-bar {

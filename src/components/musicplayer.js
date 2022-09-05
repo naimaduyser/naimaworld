@@ -24,7 +24,7 @@ const MusicPlayer = () =>
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const [volumeControl, setVolumeControl] = useState(80);
+  const [volumeControl, setVolumeControl] = useState(100);
 
   // References
   const audioPlayer = useRef(); // reference for our audio component
