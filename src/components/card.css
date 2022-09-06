@@ -103,6 +103,12 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .slide {
+        left: 0% !important;
+        filter: opacity(1) !important;
+        animation-delay: 0s !important;
+        animation: none !important;
+    }
 }
 
 /* Animated Cards Container */
