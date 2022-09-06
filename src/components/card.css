@@ -109,6 +109,14 @@
         animation-delay: 0s !important;
         animation: none !important;
     }
+
+    .card-image:hover {
+        opacity: 1;
+    }
+    
+    .card-image img:hover {
+        transform: scale(1);
+    }
 }
 
 /* Animated Cards Container */
