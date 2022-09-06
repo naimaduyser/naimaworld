@@ -238,10 +238,6 @@ input[type='range']::-webkit-slider-runnable-track {
 		display: none;
 	}
 
-	.mix-title {
-		font-size: 1.2rem;
-		line-height: 30px;
-		padding-top: 3px;
-	}
+
 
 }
