@@ -16,7 +16,7 @@ const MusicPlayer = () =>
   const dispatch = useDispatch();
   const maindata = useSelector(store => store.maindata);
   const [audioURL, SetaudioURL] = useState('');
-  
+
 
   // State
 
@@ -157,7 +157,7 @@ const MusicPlayer = () =>
       }
     }
   }, [maindata.playChange])
-  
+
   useEffect(() => {
     if (maindata.audioswitch) SetaudioURL(maindata.mix[maindata.audioIndex].audio.url);
   }, [maindata.audioswitch, maindata.playChange, maindata.audioIndex])
@@ -204,7 +204,7 @@ const MusicPlayer = () =>
       ></audio>
       {/* Song Title */}
       <div className="song-title" id="title">
-        <div className="playing-from">PLAYING FROM: THE ARCHIVE</div>
+        <div className="playing-from">NOW PLAYING:</div>
         <div className="mix-title">{maindata.isArchive? maindata.mix.length? maindata.mix[maindata.audioIndex].title : '' : ''}</div>
       </div>
 
