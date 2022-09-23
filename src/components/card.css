@@ -17,7 +17,7 @@
     overflow: hidden;
     display: block;
     transition: all 0.2s ease-in-out;
-    }
+}
 
 .card-image img {
     width: 100%;
@@ -39,7 +39,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
     line-height: 20px;
-
 }
 
 .play-pause {
@@ -51,7 +50,8 @@
     background-color: transparent;
 }
 
-.play, .pause {
+.play,
+.pause {
     background-color: transparent;
 }
 
@@ -79,7 +79,6 @@
     color: gray;
 }
 
-
 .title {
     font-size: 8rem;
     color: white;
@@ -92,53 +91,43 @@
         margin-bottom: 0;
         padding-bottom: 12vh;
     }
-
     .card-container {
         width: 100%;
         margin-bottom: 0;
     }
-
     .card-text {
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .slide {
-        left: 0% !important;
-        filter: opacity(1) !important;
-        animation-delay: 0s !important;
-        animation: none !important;
-    }
-
     .card-image:hover {
         opacity: 1;
     }
-    
     .card-image img:hover {
         transform: scale(1);
     }
 }
 
+
 /* Animated Cards Container */
+
+
 /* Slide In */
 
 @keyframes slide {
     100% {
-        left: 0%;
         filter: opacity(1);
     }
 }
 
 @-webkit-keyframes slide {
     100% {
-        left: 0%;
         filter: opacity(1);
     }
 }
 
 .slide {
     position: relative;
-    left: -200%;
     animation: slide 2s forwards;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
