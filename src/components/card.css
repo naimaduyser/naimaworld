@@ -59,10 +59,6 @@
     opacity: 0.7;
 }
 
-.card-image img:hover {
-    transform: scale(1.05);
-}
-
 .card-text {
     text-transform: uppercase;
     text-align: left;
