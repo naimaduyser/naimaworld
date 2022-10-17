@@ -102,6 +102,23 @@
     .card-image img:hover {
         transform: scale(1);
     }
+    @keyframes fade {
+        100% {
+            filter: opacity(1);
+        }
+    }
+    @-webkit-keyframes fade {
+        100% {
+            filter: opacity(1);
+        }
+    }
+    .fade {
+        position: relative;
+        animation: fade 2s forwards;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        filter: opacity(1) !important;
+    }
 }
 
 
@@ -110,21 +127,21 @@
 
 /* Slide In */
 
-@keyframes slide {
+@keyframes fade {
     100% {
         filter: opacity(1);
     }
 }
 
-@-webkit-keyframes slide {
+@-webkit-keyframes fade {
     100% {
         filter: opacity(1);
     }
 }
 
-.slide {
+.fade {
     position: relative;
-    animation: slide 2s forwards;
+    animation: fade 2s forwards;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     filter: opacity(0);

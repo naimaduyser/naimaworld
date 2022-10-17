@@ -50,7 +50,7 @@ function Cards() {
           ? <p>
               Error: {error}
             </p>
-          : <div className="cards-container slide">
+          : <div className="cards-container fade">
               {data.mixes.map((mix, index) =>
                 <Card
                   key={index}

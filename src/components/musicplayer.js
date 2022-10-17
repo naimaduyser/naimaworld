@@ -204,7 +204,7 @@ const MusicPlayer = () =>
       ></audio>
       {/* Song Title */}
       <div className="song-title" id="title">
-        <div className="playing-from">NOW PLAYING:</div>
+        <div className="playing-from">{maindata.isArchive? maindata.mix.length? "NOW PLAYING:" : "WELCOME" : ""}</div>
         <div className="mix-title">{maindata.isArchive? maindata.mix.length? maindata.mix[maindata.audioIndex].title : '' : ''}</div>
       </div>
 
@@ -249,7 +249,8 @@ const MusicPlayer = () =>
 
         {/* Duration */}
         <div className="duration">
-          {maindata.isArchive?calculateTime(audioPlayer.current.duration) : duration && !isNaN(duration) && calculateTime(duration)}
+          {maindata.isArchive? maindata.mix.length? maindata.isArchive?calculateTime(audioPlayer.current.duration) : duration && !isNaN(duration) && calculateTime(duration) : "00:00" : ""}
+
         </div>
       </div>
 
