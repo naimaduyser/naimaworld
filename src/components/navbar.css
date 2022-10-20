@@ -15,12 +15,12 @@
 .logo {
     color: #ff9900;
 }
+
 .header a {
     text-decoration: none;
     font-size: 1.5rem;
     transition: 0.2s ease-in-out;
     letter-spacing: 2px;
-
 }
 
 .header a:hover {
@@ -45,10 +45,9 @@
 }
 
 @media screen and (max-width: 1240px) {
-    .hamburger {
+    /*  .hamburger {
         display: block;
     }
-
     .nav-menu {
         position: absolute;
         flex-direction: column;
@@ -63,8 +62,20 @@
         z-index: -1;
         background: rgba(0, 0, 0, 0.9);
     }
-
     .nav-menu.active {
         left: 0;
+    } */
+    .logo {
+        text-align: center;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+    .header a {
+        letter-spacing: 10px;
     }
 }
