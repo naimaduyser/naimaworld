@@ -233,7 +233,7 @@ input[type='range']::-webkit-slider-runnable-track {
         height: 30%;
         width: 100%;
         order: 1;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         text-align: center !important;
         display: flex;
         flex-direction: column;

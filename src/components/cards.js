@@ -26,7 +26,7 @@ function Cards() {
 
   const changePlay = (index, state) => {
     state ? setplayindex(-1) : setplayindex(index);
-    dispatch(audioSwitch(maindata.audioIndex != index));
+    dispatch(audioSwitch(maindata.audioIndex !== index));
     dispatch(SetAudioIndex(index));
     dispatch(setChangedMix(data.mixes));
     dispatch(PlayChange(!state));
@@ -48,19 +48,19 @@ function Cards() {
         ? <p>Loading...</p>
         : error
           ? <p>
-              Error: {error}
-            </p>
+            Error: {error}
+          </p>
           : <div className="cards-container fade">
-              {data.mixes.map((mix, index) =>
-                <Card
-                  key={index}
-                  mix={mix}
-                  isplay={index === playindex ? true : false}
-                  Index={index}
-                  playFunc={changePlay}
-                />
-              )}
-            </div>}
+            {data.mixes.map((mix, index) =>
+              <Card
+                key={index}
+                mix={mix}
+                isplay={index === playindex ? true : false}
+                Index={index}
+                playFunc={changePlay}
+              />
+            )}
+          </div>}
     </div>
   );
 }

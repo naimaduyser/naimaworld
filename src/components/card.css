@@ -7,6 +7,7 @@
     margin-top: 40px;
     margin-bottom: 30px;
     position: relative;
+    color: white;
 }
 
 .card-image {
@@ -39,6 +40,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
     line-height: 20px;
+
 }
 
 .play-pause {
@@ -64,6 +66,10 @@
     text-align: left;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.card-text {
+    text-align: center;
 }
 
 .card-text h5 {
@@ -98,7 +104,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .play {
+    .play, .pause {
         font-size: 4rem;
         filter: opacity(0.6);
     }

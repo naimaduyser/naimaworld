@@ -11,6 +11,7 @@ import './index.css'
 import Live from './routes/live'
 import Archive from './routes/archive'
 import Schedule from './routes/schedule'
+import Residents from './routes/residents'
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" element={<Archive />} />
+      <Route path="/residents" element={<Residents />} />
       <Route path="/live" element={<Live />} />
       <Route path="/schedule" element={<Schedule />} />
     </Routes>

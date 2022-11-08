@@ -4,6 +4,7 @@
 
 :root {
   --active-link: #ff9900;
+  --yellow: #ff9900;
   --fullwidth-ml: 20px;
   --fullwidth-mr: 20px;
 }
@@ -12,10 +13,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
   font-family: 'Jura', sans-serif;
 }
 
 body {
   background-color: black;
+}
+
+a {
+  color: white;
 }
