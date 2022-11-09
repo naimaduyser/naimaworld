@@ -29,6 +29,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
     transition: all 0.3s ease-in-out;
+    border-radius: 50%;
 }
 
 .card-container {
@@ -116,7 +117,9 @@
         color: gray;
     }
     .card-image {
-        height: 45vh;
+        height: 35vh;
+        width: 35vh;
+        margin: 0 auto;
     }
     .card-image img {
         width: 100%;
