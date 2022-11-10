@@ -1,17 +1,25 @@
 import {gql} from "@apollo/client";
 
-export const mixes = gql`
+export const content = gql`
 query MyQuery {
-    mixes(orderBy: date_DESC, first:100) {
-      audio {
-        url
-      }
-      image {
-        url
-      }
-      date
-      title
-      genre
+  residents {
+    name
+    biography
+    image {
+      url
     }
-  }  
+  }
+  mixes(orderBy: date_DESC, first:100) {
+    audio {
+      url
+    }
+    image {
+      url
+    }
+    date
+    title
+    genre
+  }
+}
 `
+

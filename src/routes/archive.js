@@ -17,7 +17,7 @@ const Archive = () =>{
   
   return (
     <>
-      <div className="cards-container">
+      <div>
         <Cards />
       </div>
     </>

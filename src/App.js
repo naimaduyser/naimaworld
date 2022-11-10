@@ -9,32 +9,22 @@ import Navbar from "./components/Navbar";
 import './index.css'
 // Pages
 import Archive from './routes/Archive'
-import About from './routes/About'
 import Residents from './routes/Residents'
+import Contact from './routes/Contact'
 
 function App() {
-    const dispatch = useDispatch();
-    useEffect(() => dispatch(IsArchive(true)), [])
-    return ( <
-        >
-        <
-        Navbar / >
-        <
-        Routes >
-        <
-        Route path = "/"
-        element = { < Archive / > }
-        /> <
-        Route path = "/about"
-        element = { < About / > }
-        /> <
-        Route path = "/residents"
-        element = { < Residents / > }
-        /> <
-        /Routes> <
-        MusicPlayer / >
-        <
-        />
-    );
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(IsArchive(true)), [])
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Archive />} />
+        <Route path="/residents" element={<Residents />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <MusicPlayer />
+    </>
+  );
 }
 export default App;

@@ -1,10 +1,17 @@
 import React from "react";
 
+// Styling
+import "../components/residents.css"
+import "../components/card.css"
+
+
+// Components
+import ResidentCards from "../components/ResidentCards"
 
 const Residents = () => {
   return (
-    <div>
-      Work in progress...
+    <div className="residents">
+      <ResidentCards />
     </div>
   );
 };

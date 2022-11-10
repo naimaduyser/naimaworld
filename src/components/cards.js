@@ -14,13 +14,13 @@ import "./card.css";
 
 // Querying
 import { useQuery } from "@apollo/client";
-import { mixes } from "../gql/Query";
+import { content } from "../gql/Query";
 import Card from "./Card";
 
 function Cards() {
   const dispatch = useDispatch();
   const maindata = useSelector(store => store.maindata);
-  const { loading, error, data } = useQuery(mixes);
+  const { loading, error, data } = useQuery(content);
 
   const [playindex, setplayindex] = useState(-2);
 
@@ -50,7 +50,7 @@ function Cards() {
           ? <p>
             Error: {error}
           </p>
-          : <div className="cards-container fade">
+          : <div className="container fade">
             {data.mixes.map((mix, index) =>
               <Card
                 key={index}
