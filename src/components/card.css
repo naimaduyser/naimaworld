@@ -17,7 +17,6 @@
     text-align: center;
     overflow: hidden;
     display: block;
-    transition: all 0.2s ease-in-out;
 }
 
 .card-image img {
@@ -40,7 +39,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
     line-height: 20px;
-
 }
 
 .play-pause {
@@ -104,7 +102,8 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .play, .pause {
+    .play,
+    .pause {
         font-size: 4rem;
         filter: opacity(0.6);
     }
@@ -142,10 +141,13 @@
     }
     .fade {
         position: relative;
-        animation: fade 2s forwards;
+        animation: 2s ease-in-out forwards;
         animation-delay: 0.5s;
         animation-iteration-count: 1;
         filter: opacity(1) !important;
+    }
+    .fade-out {
+        filter: opacity(0) !important;
     }
 }
 
@@ -154,6 +156,22 @@
 
 
 /* Slide In */
+
+.fade,
+.fade-out {
+    position: relative;
+    animation: ease 2s forwards;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.fade {
+    filter: opacity(1) !important;
+}
+
+.fade-out {
+    filter: opacity(0) !important;
+}
 
 @keyframes fade {
     100% {
@@ -167,10 +185,8 @@
     }
 }
 
-.fade {
-    position: relative;
-    animation: fade 2s forwards;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
-    filter: opacity(0);
+@keyframes fade-out {
+    100% {
+        filter: opacity(0);
+    }
 }

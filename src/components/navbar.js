@@ -10,6 +10,9 @@ import { BsSearch } from "react-icons/bs";
 // Styling
 import "./navbar.css"
 
+// Media
+import earth from "../assets/images/earth.png"
+
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
@@ -19,9 +22,25 @@ const Navbar = () => {
 
     return (
         <div className="header">
-            <div className="header-logo">
-                <NavLink to="/" onClick={closeSideBar} className="logo">naima.world</NavLink>
-            </div>
+          <div className="header-logo">
+                <NavLink to="/" className="logo">naima.world</NavLink>
+          </div>
+
+          <div className="navmenu-container">
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className="navlink-list-item"> 
+                      <NavLink to="/about" className="navlink">about</NavLink>
+              </li>
+              <li className="navlink-list-item">
+                  <NavLink to="/residents" className="navlink">residents</NavLink>
+              </li>
+            </ul> 
+          </div>
+
+          <div className="header-image" onClick={handleClick}>
+            <img src={earth} alt="earth illustration" className="earth"/>
+          </div>
+
               {/*
             <div className="search-and-filter">
                 <div className="filter-dropdown">
@@ -31,17 +50,7 @@ const Navbar = () => {
                     <BsSearch className="search-icon" />
 
                 </div> 
-            <ul className={click ? 'nav-menu active' : 'nav-menu'} onClick={closeSideBar}>
-                <li>
-                    <NavLink to="/residents" className="navlink" onClick={closeSideBar}>residents</NavLink>
-                </li>
-              <li>
-                <NavLink to="/live" className="navlink" onClick={closeSideBar}>live</NavLink>
-            </li>
-            <li>
-                <NavLink to="/schedule" className="navlink" onClick={closeSideBar}>schedule</NavLink>
-            </li> 
-            </ul> 
+           
             <div className="hamburger" onClick={handleClick}>
                 {click ? (<FaTimes size={20} />) : (<FaBars size={0} />)}
             </div> */}

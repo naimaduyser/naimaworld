@@ -7,7 +7,7 @@ import { IsArchive } from "../store/actions/maindata";
 import "../components/card.css";
 
 // Components
-import Cards from "../components/cards";
+import Cards from "../components/Cards";
 
 const Archive = () =>{
   const dispatch = useDispatch();

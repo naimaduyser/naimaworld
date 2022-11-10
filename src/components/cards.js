@@ -15,7 +15,7 @@ import "./card.css";
 // Querying
 import { useQuery } from "@apollo/client";
 import { mixes } from "../gql/Query";
-import Card from "./card";
+import Card from "./Card";
 
 function Cards() {
   const dispatch = useDispatch();

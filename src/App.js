@@ -4,29 +4,37 @@ import { useDispatch } from "react-redux";
 
 import { IsArchive } from "./store/actions/maindata";
 
-import MusicPlayer from "./components/musicplayer";
-import Navbar from "./components/navbar";
+import MusicPlayer from "./components/MusicPlayer";
+import Navbar from "./components/Navbar";
 import './index.css'
 // Pages
-import Live from './routes/live'
-import Archive from './routes/archive'
-import Schedule from './routes/schedule'
-import Residents from './routes/residents'
+import Archive from './routes/Archive'
+import About from './routes/About'
+import Residents from './routes/Residents'
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() =>dispatch(IsArchive(true)), [])
-  return (
-    <>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Archive />} />
-      <Route path="/residents" element={<Residents />} />
-      <Route path="/live" element={<Live />} />
-      <Route path="/schedule" element={<Schedule />} />
-    </Routes>
-    <MusicPlayer />
-    </>
-  );
+    const dispatch = useDispatch();
+    useEffect(() => dispatch(IsArchive(true)), [])
+    return ( <
+        >
+        <
+        Navbar / >
+        <
+        Routes >
+        <
+        Route path = "/"
+        element = { < Archive / > }
+        /> <
+        Route path = "/about"
+        element = { < About / > }
+        /> <
+        Route path = "/residents"
+        element = { < Residents / > }
+        /> <
+        /Routes> <
+        MusicPlayer / >
+        <
+        />
+    );
 }
 export default App;
