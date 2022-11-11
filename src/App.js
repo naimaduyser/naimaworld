@@ -4,13 +4,14 @@ import { useDispatch } from "react-redux";
 
 import { IsArchive } from "./store/actions/maindata";
 
-import MusicPlayer from "./components/MusicPlayer";
-import Navbar from "./components/Navbar";
+import MusicPlayer from "./components/scripts/MusicPlayer";
+import Navbar from "./components/scripts/Navbar";
 import './index.css'
 // Pages
 import Archive from './routes/Archive'
 import Residents from './routes/Residents'
 import Contact from './routes/Contact'
+import Resident from './routes/Resident'
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Archive />} />
         <Route path="/residents" element={<Residents />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/residents/:slug" element={<Resident />} />
       </Routes>
       <MusicPlayer />
     </>

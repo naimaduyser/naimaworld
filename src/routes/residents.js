@@ -1,14 +1,15 @@
 import React from "react";
 
 // Styling
-import "../components/residents.css"
-import "../components/card.css"
+import "../components/styles/residents.css"
+import "../components/styles/card.css"
 
 
 // Components
-import ResidentCards from "../components/ResidentCards"
+import ResidentCards from "../components/scripts/ResidentCards"
 
 const Residents = () => {
+
   return (
     <div className="residents">
       <ResidentCards />

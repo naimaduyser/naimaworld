@@ -4,10 +4,10 @@ import { useDispatch } from "react-redux";
 import { IsArchive } from "../store/actions/maindata";
 
 // Styling
-import "../components/card.css";
+import "../components/styles/card.css";
 
 // Components
-import Cards from "../components/Cards";
+import Cards from "../components/scripts/Cards";
 
 const Archive = () =>{
   const dispatch = useDispatch();

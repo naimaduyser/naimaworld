@@ -5,6 +5,7 @@ query MyQuery {
   residents {
     name
     biography
+    slug
     image {
       url
     }
@@ -19,6 +20,7 @@ query MyQuery {
     date
     title
     genre
+    madeBy
   }
 }
 `

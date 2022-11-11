@@ -1,12 +1,12 @@
 import React from "react";
 
 // Styling
-import "../components/contact.css"
+import "../components/styles/contact.css"
 
 const Contact = () => {
   return (
     <div className="contact-container fade">
-      Reach out at naimadotworld@gmail.com
+      <p>Send a message to naimadotworld@gmail.com</p>
     </div>
   );
 };
