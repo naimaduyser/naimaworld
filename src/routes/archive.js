@@ -13,7 +13,7 @@ const Archive = () =>{
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(IsArchive(true));
-  }, []);
+  }, [dispatch]);
   
   return (
     <>

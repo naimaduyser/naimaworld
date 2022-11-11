@@ -15,7 +15,7 @@ import Resident from './routes/Resident'
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(IsArchive(true)), [])
+  useEffect(() => dispatch(IsArchive(true)), [dispatch])
   return (
     <>
       <Navbar />

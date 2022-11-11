@@ -4,7 +4,7 @@ import React from "react";
 import "../styles/residents.css";
 
 // Links
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const ResidentCard = props => {
