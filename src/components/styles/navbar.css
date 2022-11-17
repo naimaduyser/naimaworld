@@ -27,7 +27,7 @@
     .earth {
         width: 60px;
         height: 60px;
-        cursor: pointer;
+        /* cursor: pointer; */
         transition: all 0.8s ease-in-out;
     }
 
