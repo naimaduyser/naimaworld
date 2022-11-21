@@ -4,7 +4,7 @@ import React from "react";
 import "../styles/residents.css";
 
 // Links
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const ResidentCard = props => {
@@ -14,10 +14,10 @@ const ResidentCard = props => {
     return (
         <div className="card-container resident-container" key={resident.id}>
             <div className="card-image">
-                <Link to={resident.slug} key={resident.slug}> 
+                {/* <Link to={resident.slug} key={resident.slug}> 
                     <img src={resident.image.url} alt="resident" className="resident-image" />
-                </Link>
-                {/* <img src={resident.image.url} alt="resident" className="resident-image" /> */}
+                </Link> */}
+                <img src={resident.image.url} alt="resident" className="resident-image" />
 
             </div>
             <div className="resident-card-text overlay">

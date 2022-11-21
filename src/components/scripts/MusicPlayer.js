@@ -219,7 +219,7 @@ const MusicPlayer = () =>
           <BsFillSkipBackwardFill style={{ color: "white" }} />
         </button>
 
-        <button onClick={togglePlayPause}>
+        <button onClick={togglePlayPause} className="play-pause-buttons">
           {isPlaying ? (
             <BsFillPauseFill style={{ color: "white" }} />
           ) : (
