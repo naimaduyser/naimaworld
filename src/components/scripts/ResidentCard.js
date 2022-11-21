@@ -13,7 +13,7 @@ const ResidentCard = props => {
 
     return (
         <div className="card-container resident-container" key={resident.id}>
-            <div className="card-image">
+            <div className="card-image-resident">
                 {/* <Link to={resident.slug} key={resident.slug}> 
                     <img src={resident.image.url} alt="resident" className="resident-image" />
                 </Link> */}
