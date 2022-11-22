@@ -15,11 +15,18 @@ const Navbar = () => {
 
   return (
     <div className="header">
-      <div className="header-logo">
-        <NavLink to="/" className="logo">naima.world</NavLink>
+
+      <div className="header-left">
+        <div className="header-image" onClick={handleClick}>
+          <img src={earth} alt="earth illustration" className="earth" />
+        </div>
+
+        <div className="header-logo">
+          <NavLink to="/" className="logo">naima.world</NavLink>
+        </div>
       </div>
 
-      <div className="navmenu-container">
+
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="navlink-list-item" onClick={window.screen.width <= "1240" && handleClick}>
             <NavLink to="/residents" className="navlink">residents</NavLink>
@@ -28,11 +35,7 @@ const Navbar = () => {
             <NavLink to="/contact" className="navlink">contact</NavLink>
           </li>
         </ul>
-      </div>
 
-      <div className="header-image" onClick={handleClick}>
-        <img src={earth} alt="earth illustration" className="earth" />
-      </div>
 
     </div>
   )
