@@ -1,14 +1,14 @@
      .header {
-       position: fixed;
-       top: 0;
-       width: 100%;
        height: 120px;
+       width: 50%;
+       top: 0;
+       position: fixed;
        display: flex;
-       justify-content: space-between;
+       justify-content: flex-start;
+       gap: 20px;
        align-items: center;
-       z-index: 10;
+       z-index: 5;
        padding-left: 25px;
-       padding-right: 25px;
        background-color: black;
      }
 
@@ -19,25 +19,9 @@
        letter-spacing: 5px;
      }
 
-     .residents-navlink {
-       cursor: pointer;
-     }
-
-     .header a:hover {
-       color: #ff9900;
-     }
-
-     .header-left {
-       display: flex;
-       align-items: center;
-       justify-content: flex-start;
-       width: 50%;
-       gap: 30px;
-     }
-
      .header-image {
        width: 55px;
-       height: 100px;
+       height: 55px;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -55,84 +39,12 @@
        height: 55px;
        transform: rotate(180deg);
      }
-
-     .active {
-       color: #ff9900;
-     }
-
+     
      .logo {
        color: #ff9900;
      }
 
-     /* Slide-In Navlinks */
-
-     .nav-menu {
-       display: flex;
-       justify-content: flex-end;
-       gap: 160px;
-       align-items: center;
-       top: 0;
-       text-align: center;
-       width: 50vw;
-       height: 120px;
-       transition: 0.4s ease-in-out;
-     }
-
-
-     .nav-menu li {
-       list-style-type: none;
-     }
-
-
-     .navlink-list-item {
-       width: 150px;
-     }
-
-
-     .residents-dropdown {
-       height: 80px;
-       width: 300px;
-       background-color: red;
-
-     }
-
-     .residents {
-       cursor: pointer;
-     }
-
-
-     .dropdown {
-       position: absolute;
-     }
-
-     .dropdown-menu {
-       width: 200px;
-       text-align: left;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: space-around;
-       margin-top: 20px;
-     }
-
-     .dropdown-menu__item {
-       background-color: black;
-       width: 100%;
-       height: 100%;
-       border-top: 5px solid black;
-       cursor: pointer;
-       padding: 12px 12px 12px 2px;
-       padding-left: 20px;
-     }
-
-     .dropdown-menu__item a {
-       color: white;
-     }
-
-
-
-
-     @media screen and (max-width: 1240px) {
+     /* @media screen and (max-width: 1240px) {
 
 
        .header-left {
@@ -165,36 +77,6 @@
 
        .nav-menu.active {
          left: 0;
-       }
+       } */
 
-
-       .navlink-list-item {
-         width: 100%;
-       }
-
-     }
-
-     @keyframes faderesidents {
-       0% {
-         filter: opacity(0)
-       }
-
-       100% {
-         filter: opacity(1)
-       }
-     }
-
-     @-webkit-keyframes faderesidents {
-       0% {
-         filter: opacity(1)
-       }
-
-       100% {
-         filter: opacity(1)
-       }
-     }
-
-     .faderesidents {
-       animation: faderesidents 3s ease-in;
-
-     }
+  

@@ -14,6 +14,7 @@ const Card = props => {
     playFunc(Index, isplay);
   };
 
+
   return (
     <div className="card-container" key={mix.id}>
       <div className="card-image" onClick={playClick}>

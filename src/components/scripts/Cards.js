@@ -11,13 +11,19 @@ import {
 
 // Styling
 import "../styles/card.css"
+import "../styles/dropdown.css"
+import "../styles/navbar.css"
+
 
 // Querying
 import { useQuery } from "@apollo/client";
 import { content } from "../../gql/Query";
 import Card from "./Card";
+import Dropdown from './Dropdown';
+import { GoTriangleDown } from 'react-icons/go';
 
 function Cards() {
+
   const dispatch = useDispatch();
   const maindata = useSelector(store => store.maindata);
   const { loading, error, data } = useQuery(content);
@@ -32,6 +38,9 @@ function Cards() {
     dispatch(PlayChange(!state));
     dispatch(IsArchive(true));
   };
+  const [open, setOpen] = useState(false)
+  const handleClick = () => setOpen(!open);
+
 
   useEffect(
     () => {
@@ -39,11 +48,24 @@ function Cards() {
         ? setplayindex(maindata.audioIndex)
         : setplayindex(-1);
     },
-    [maindata.audioPlayChange, maindata.audioIndex]
+    [maindata.audioPlayChange, maindata.audioIndex],
   );
 
   return (
     <div>
+      <div>
+        <div className="dropdown-menu__container" onClick={handleClick} >
+          <button className="residents">residents<GoTriangleDown className="triangle" /></button>
+          <ul className="dropdown-menu">
+            {open && data.residents.map((resident, index) =>
+              <Dropdown
+                resident={resident.name.toLowerCase()}
+                key={index}
+              />
+            )}
+          </ul>
+        </div>
+      </div>
       {loading
         ? <p>Loading...</p>
         : error
