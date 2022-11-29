@@ -231,7 +231,7 @@ input[type='range']::-webkit-slider-runnable-track {
 
 @media screen and (max-width: 1240px) {
   .music-container {
-    height: 260px;
+    height: 200px;
     width: 100%;
     padding-right: 5%;
     padding-left: 5%;
@@ -258,6 +258,7 @@ input[type='range']::-webkit-slider-runnable-track {
 
   .song-title {
     height:40%;
+    font-size: .8rem;
     width: 100%;
     text-align: center !important;
     display: flex;
@@ -290,6 +291,6 @@ input[type='range']::-webkit-slider-runnable-track {
 
 .play-pause-buttons,
 .arrows {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 }

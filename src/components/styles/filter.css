@@ -42,7 +42,9 @@
   letter-spacing: 4px;
 }
 
-.filter-option p, li,a {
+.filter-option p,
+li,
+a {
   font-size: 1.3rem;
   color: #ff9900;
   text-align: center;
@@ -54,4 +56,18 @@
   justify-content: center;
   transition: all .4s ease;
   text-decoration: none;
+}
+
+
+@media screen and (max-width: 1240px) {
+  .filter {
+    top: 80px;
+    height: 70px;
+  }
+
+  .filter-option p,
+  li,
+  a {
+    font-size: 1rem;
+  }
 }
