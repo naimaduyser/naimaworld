@@ -30,6 +30,7 @@ function Cards() {
 
   const [playindex, setplayindex] = useState(-2);
 
+
   const changePlay = (index, state) => {
     state ? setplayindex(-1) : setplayindex(index);
     dispatch(audioSwitch(maindata.audioIndex !== index));
@@ -51,6 +52,13 @@ function Cards() {
     [maindata.audioPlayChange, maindata.audioIndex],
   );
 
+  function randomize(a, b) {
+    return Math.random() - 0.5;
+  }
+
+
+
+
   return (
     <div>
       <Filter />
@@ -69,7 +77,7 @@ function Cards() {
                 Index={index}
                 playFunc={changePlay}
               />
-            )}
+            ).sort(randomize)}
           </div>}
     </div>
   );
