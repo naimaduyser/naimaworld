@@ -231,7 +231,7 @@ input[type='range']::-webkit-slider-runnable-track {
 
 @media screen and (max-width: 1240px) {
   .music-container {
-    height: 220px;
+    height: 260px;
     width: 100%;
     padding-right: 5%;
     padding-left: 5%;
@@ -277,12 +277,14 @@ input[type='range']::-webkit-slider-runnable-track {
 
   .duration {
     width: 150px;
+    font-size: .8rem;
   }
 
   .current-time {
     padding: 0;
     width: 150px;
     padding-right: 0;
+    font-size: .8rem;
   }
 
 

@@ -1,14 +1,13 @@
      .header {
-       height: 120px;
-       width: 50%;
+       height: 100px;
+       width: 100%;
        top: 0;
        position: fixed;
        display: flex;
-       justify-content: flex-start;
-       gap: 20px;
+       justify-content: center;
+       gap: 30px;
        align-items: center;
        z-index: 5;
-       padding-left: 25px;
        background-color: black;
      }
 
@@ -17,6 +16,11 @@
        font-size: 1.8rem;
        transition: 0.2s ease-in-out;
        letter-spacing: 5px;
+       width: 200px;
+     }
+
+     .header a:hover {
+      letter-spacing: 6px;
      }
 
      .header-image {
@@ -39,7 +43,7 @@
        height: 55px;
        transform: rotate(180deg);
      }
-     
+
      .logo {
        color: #ff9900;
      }
@@ -78,5 +82,3 @@
        .nav-menu.active {
          left: 0;
        } */
-
-  

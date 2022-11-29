@@ -238,7 +238,8 @@ const MusicPlayer = () => {
 
           {/* Duration */}
           <div className="duration">
-            {(maindata.isArchive && maindata.mix.length && maindata.isArchive) ? (calculateTime(audioPlayer.current.duration) + ":" + duration && !isNaN(duration) && calculateTime(duration)) : "00:00"}
+            {/* {(maindata.isArchive && maindata.mix.length && maindata.isArchive) ? (calculateTime(audioPlayer.current.duration) + ":" + duration && !isNaN(duration) && calculateTime(duration)) : "00:00"} */}
+            {maindata.isArchive ? maindata.mix.length ? maindata.isArchive ? calculateTime(audioPlayer.current.duration) : duration && !isNaN(duration) && calculateTime(duration) : "00:00" : ""}
           </div>
         </div>
 

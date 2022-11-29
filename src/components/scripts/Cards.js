@@ -14,13 +14,13 @@ import "../styles/card.css"
 import "../styles/dropdown.css"
 import "../styles/navbar.css"
 
+// Components
+import Filter from "./Filter";
+import Card from "./Card";
 
 // Querying
 import { useQuery } from "@apollo/client";
 import { content } from "../../gql/Query";
-import Card from "./Card";
-import Dropdown from './Dropdown';
-import { GoTriangleDown } from 'react-icons/go';
 
 function Cards() {
 
@@ -53,19 +53,7 @@ function Cards() {
 
   return (
     <div>
-      <div>
-        <div className="dropdown-menu__container" onClick={handleClick} >
-          <button className="residents">residents<GoTriangleDown className="triangle" /></button>
-          <ul className="dropdown-menu">
-            {open && data.residents.map((resident, index) =>
-              <Dropdown
-                resident={resident.name.toLowerCase()}
-                key={index}
-              />
-            )}
-          </ul>
-        </div>
-      </div>
+      <Filter />
       {loading
         ? <p>Loading...</p>
         : error
