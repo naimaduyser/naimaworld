@@ -10,7 +10,7 @@ query MyQuery {
       url
     }
   }
-  mixes(first:100) {
+  mixes(orderBy: date_DESC, first:100) {
     audio {
       url
     }

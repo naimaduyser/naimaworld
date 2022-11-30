@@ -52,12 +52,6 @@ function Cards() {
     [maindata.audioPlayChange, maindata.audioIndex],
   );
 
-  function randomize(a, b) {
-    return Math.random() - 0.5;
-  }
-
-
-
 
   return (
     <div>
@@ -77,7 +71,7 @@ function Cards() {
                 Index={index}
                 playFunc={changePlay}
               />
-            ).sort(randomize)}
+            )}
           </div>}
     </div>
   );
