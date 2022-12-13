@@ -12,7 +12,7 @@ import Archive from './routes/Archive'
 import Residents from './routes/Residents'
 import Contact from './routes/Contact'
 import Resident from './routes/Resident'
-import Filter from "./components/scripts/Filter";
+// import Filter from "./components/scripts/Filter";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Filter />
+      {/* <Filter /> */}
       <Routes>
         <Route path="/" element={<Archive />} />
         <Route path="/residents" element={<Residents />} />

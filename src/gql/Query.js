@@ -1,7 +1,13 @@
+import { useQuery } from "@apollo/client";
 import {gql} from "@apollo/client";
 
 export const content = gql`
 query MyQuery {
+  genres: __type(name: "Genres") {
+    enumValues {
+      name
+    }
+  }
   residents {
     name
     biography
@@ -24,3 +30,9 @@ query MyQuery {
   }
 }
 `
+
+export const Test = () => {
+  const data = useQuery(content);
+  return console.log(data.mixes);
+}
+

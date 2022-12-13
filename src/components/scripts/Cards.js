@@ -15,12 +15,14 @@ import "../styles/dropdown.css"
 import "../styles/navbar.css"
 
 // Components
-import Filter from "./Filter";
+// import Filter from "./Filter";
 import Card from "./Card";
 
 // Querying
 import { useQuery } from "@apollo/client";
 import { content } from "../../gql/Query";
+
+
 
 function Cards() {
 
@@ -39,8 +41,8 @@ function Cards() {
     dispatch(PlayChange(!state));
     dispatch(IsArchive(true));
   };
-  const [open, setOpen] = useState(false)
-  const handleClick = () => setOpen(!open);
+  // const [open, setOpen] = useState(false)
+  // const handleClick = () => setOpen(!open);
 
 
   useEffect(
@@ -55,7 +57,7 @@ function Cards() {
 
   return (
     <div>
-      <Filter />
+      {/* <Filter /> */}
       {loading
         ? <p>Loading...</p>
         : error

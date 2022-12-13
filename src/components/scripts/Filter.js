@@ -9,24 +9,23 @@ import { NavLink } from 'react-router-dom'
 
 const Filter = () => {
   const { data } = useQuery(content);
-
   const [open, setOpen] = useState(false);
   const handleClick = () => setOpen(!open);
 
   return (
 
     <div className="filter">
-      {/* <ul className="filter-option"> */}
-      {/* <p className="filter-option__title" onClick={handleClick}>residents</p> */}
-      {/* <div className="filter-option__container">
-          {open && data.residents.map((resident, index) =>
+      <ul className="filter-option"> 
+       <p className="filter-option__title" onClick={handleClick}>residents</p> 
+       <div className="filter-option__container">
+          { open && data.genres.enumValues.map((genre, index) =>
             <div className="filter-option__list-item-container">
-            <li key={index}>{resident.name.toLowerCase()}</li>
+            <li key={index}>{genre.name.toLowerCase()}</li>
             </div>
             )}
             </div>
-          </ul> */}
-      {/* <ul className="filter-option">
+          </ul>
+      <ul className="filter-option">
         <p className="filter-option__title" onClick={handleClick}>genres</p>
         <div className="filter-option__container">
         {open && data.mixes.map((mix, index) =>
@@ -35,13 +34,13 @@ const Filter = () => {
           </div>
           )}
           </div>
-        </ul> */}
-      <div className="filter-option">
+        </ul>
+      {/* <div className="filter-option">
         <NavLink to="/residents" className="filter-link">residents</NavLink>
       </div>
       <div className="filter-option">
         <NavLink to="/contact" className="filter-link">contact</NavLink>
-      </div>
+      </div> */}
       </div>
   )
 }
